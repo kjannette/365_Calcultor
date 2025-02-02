@@ -5,7 +5,7 @@ namespace CalculatorApp
         // Method to add two numbers from a comma-separated string
         public int Add(string input)
         {
-            if (string.IsNullOrWhiteSpace(input))
+            if (string.IsNullOrWhiteSpace(input)) // Check for empty input
             {
                 return 0;
             }
@@ -13,7 +13,17 @@ namespace CalculatorApp
             string[] parts = input.Split(',', '\n', '#');
 
            
-            return parts.Select(ParseNumber).Sum();
+            var numbers = parts.Select(ParseNumber).ToList();
+
+            // Identify negative numbers
+            var negativeNumbers = numbers.Where(n => n < 0).ToList();
+            if (negativeNumbers.Any())
+            {
+                throw new ArgumentException($"Negatives not allowed: {string.Join(", ", negativeNumbers)}");
+            }
+
+            // Filter out numbers greater than 1000
+            return numbers.Where(n => n <= 1000).Sum();
         }
 
         // Helper method to parse a number, converting invalid inputs to 0
