@@ -1,0 +1,24 @@
+using System;
+
+namespace CalculatorApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter two numbers separated by a comma (e.g., 1,2):");
+            string input = Console.ReadLine();
+
+            try
+            {
+                Calculator calculator = new Calculator();
+                int result = calculator.Add(input);
+                Console.WriteLine($"Result: {result}");
+            }
+            catch (CalculatorException ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+    }
+}
