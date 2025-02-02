@@ -10,7 +10,7 @@ namespace CalculatorApp
                 return 0;
             }
 
-            string[] parts = input.Split(',');
+            string[] parts = input.Split(',', '\n', '#');
 
            
             return parts.Select(ParseNumber).Sum();
