@@ -12,14 +12,8 @@ namespace CalculatorApp
 
             string[] parts = input.Split(',');
 
-            if (parts.Length > 2)
-            {
-                throw new CalculatorException("More than two numbers provided.");
-            }
-
-            int[] numbers = parts.Select(ParseNumber).ToArray();
-
-            return numbers.Sum();
+           
+            return parts.Select(ParseNumber).Sum();
         }
 
         // Helper method to parse a number, converting invalid inputs to 0
