@@ -1,23 +1,3 @@
-otnet new xunit -o tests/CalculatorApp.Tests
-``
-
-## Step 2: Add Test Cases
-
-e will add test cases to cover the following scenarios:
- Valid input with two numbers.
- Input with more than two numbers.
- Input with invalid characters.
- Input with negative numbers.
- Input with numbers greater than 1000.
- Empty input.
-
-## Step 3: Update the ReadMe File
-
-dd a single line statement to the ReadMe file explaining how to run the unit tests.
-
-et's implement these changes in the code.
-
-``diff
 using Xunit;
 using CalculatorApp;
 using System;
