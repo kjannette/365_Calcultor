@@ -1,6 +1,5 @@
 namespace CalculatorApp
 {
-    using System.Text.RegularExpressions;
     public class Calculator
     {
         // Method to add two numbers from a comma-separated string
@@ -11,8 +10,7 @@ namespace CalculatorApp
                 return 0;
             }
 
-            // Split the input string on any sequence of non-number characters
-            string[] parts = Regex.Split(input, @"\D+");
+            string[] parts = input.Split(',', '\n', '#');
 
            
             var numbers = parts.Select(ParseNumber).ToList();
