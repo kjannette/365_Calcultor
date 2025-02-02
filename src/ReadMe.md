@@ -12,6 +12,10 @@ This is a simple calculator application built using C# and .NET 8.0. The applica
    ```
 
 ## Requirements
+1. Run the following command from the root directory:
+   ```
+   dotnet test tests/CalculatorApp.Tests
+   ```
 
 ## Examples
 
