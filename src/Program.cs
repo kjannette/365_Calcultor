@@ -6,7 +6,7 @@ namespace CalculatorApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter two numbers separated by a comma (e.g., 1,2):");
+            Console.WriteLine("Enter numbers separated by a comma (e.g., 1,2):");
             string input = Console.ReadLine();
 
             try
