@@ -2,22 +2,9 @@ ReadMe.md
 
 ## Usage
 
-This is a simple calculator application built using C# and .NET 8.0. The application supports addition of up to two numbers provided via command line input.
-
-## Running Unit Tests
-
-1. Navigate to the `tests` directory and run the following command:
-   ```
-   dotnet test
-   ```
+This is a simple calculator application built using C# and .NET 8.The application supports addition of up to two numbers provided via command line input.
 
 ## Requirements
-1. Run the following command from the root directory:
-   ```
-   dotnet test tests/CalculatorApp.Tests
-   ```
-
-## Examples
 
 - .NET 8.0 SDK
 
@@ -33,20 +20,29 @@ This is a simple calculator application built using C# and .NET 8.0. The applica
 
 ## Running the Application
 
-1. After building the application, run the following command:
+1. After building the application, run the following command from root:
 
    ```
    dotnet run --project src
    ```
 
-2. Enter numbers separated by a comma when prompted (e.g., `1,2`).
+2. Enter numbers separated by a comma, "#" character, or other non-numeric delimiter (i.e. wsfgf, xxx, ddd) when prompted.
 
-## Usage
+## Usage - General
 
 - The application accepts a single input string with two numbers separated by a comma.
 - If more than two numbers are entered, an exception will be thrown.
 - Empty input or missing numbers will be treated as `0`.
 - Invalid numbers or characters will be converted to `0`.
+
+## Running Unit Tests
+
+1. Navigate to the `tests` directory and run the following command:
+
+   ```
+   dotnet test
+
+   ```
 
 ## Examples
 
